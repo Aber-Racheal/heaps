@@ -10,7 +10,7 @@ class MaxHeap:
 
     def heapify_up(self, i):
         # Perform heapify-up to maintain heap property
-        while i > 0 and self.heap[i] > self.heap[(i - 1) // 2]:  # Use (i - 1) // 2 for parent index
+        while i > 0 and self.heap[i] > self.heap[(i - 1) // 2]: 
             # Swap current element with its parent if it violates the max heap property
             self.heap[i], self.heap[(i - 1) // 2] = self.heap[(i - 1) // 2], self.heap[i]
             i = (i - 1) // 2  # Update index to parent
@@ -23,7 +23,7 @@ class MaxHeap:
         deleted = self.heap.pop()
         # Perform heapify-down to maintain heap property
         self.heapify_down(idx)
-        return deleted  # Return the deleted value
+        return deleted 
 
     def heapify_down(self, i):
         n = len(self.heap)
@@ -50,9 +50,9 @@ class MaxHeap:
         self.heap.pop()
         # Perform heapify-down to maintain heap property
         self.heapify_down(0)
-        return max_elem  # Return the maximum element
+        return max_elem  
 
-# Example usage:
+
 heap = MaxHeap()
 heap.insert(5)
 heap.insert(3)
@@ -60,10 +60,10 @@ heap.insert(8)
 heap.insert(1)
 heap.insert(10)
 
-print(heap.heap)  # Print current state of the heap
-print(heap.extract_max())  # Output: 10
+print(heap.heap)  
+print(heap.extract_max())  
 print(heap.heap)
-print(heap.delete(5))  # Output: 5
+print(heap.delete(5)) 
 print(heap.heap)
 
 
@@ -86,19 +86,20 @@ def convert_to_max_heap(nums):
     heapq.heapify(nums)
     # Convert back to positive numbers
     nums = [-num for num in nums]
-    return nums  # Return the max-heap array
+    return nums  
 
-# Example usage:
+
 nums = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
 print("Original array:", nums)
 
 # Convert to min-heap
 convert_to_min_heap(nums.copy())
-print("Min-heap:", nums)  # Output: Min-heap: [1, 1, 2, 3, 3, 5, 4, 6, 5, 5, 9]
+print("Min-heap:", nums)  
+
 
 # Convert to max-heap
 max_heap = convert_to_max_heap(nums.copy())
-print("Max-heap:", max_heap)  # Output: Max-heap: [9, 5, 6, 5, 5, 5, 4, 1, 3, 3, 2]
+print("Max-heap:", max_heap)  
 
 
 
@@ -124,12 +125,12 @@ def findKthLargest(nums, k):
             heapq.heappop(min_heap)
     
     # The root of the heap is the Kth largest element
-    return min_heap[0]  # Return the root of the heap
+    return min_heap[0]  
 
-# Example usage:
+
 nums = [3, 2, 1, 5, 6, 4]
 k = 2
-print(findKthLargest(nums, k))  # Output: 5
+print(findKthLargest(nums, k))  
 
 
 
@@ -159,12 +160,11 @@ def sort_almost_sorted(nums, k):
     
     return result  # Return the sorted array
 
-# Example usage:
+
 nums = [3, 2, 1, 5, 6, 4]
 k = 2
 sorted_nums = sort_almost_sorted(nums, k)
-print(sorted_nums)  # Output: [1, 2, 3, 4, 5, 6]
-
+print(sorted_nums) 
 
 
 
@@ -207,7 +207,7 @@ class PriorityQueue:
         # Return the number of elements in the priority queue
         return len(self._pq)
 
-# Example usage:
+
 pq = PriorityQueue()
 
 # Insert elements with priorities
@@ -216,18 +216,18 @@ pq.insert(1, 'Task 1')
 pq.insert(2, 'Task 2')
 
 # Get and remove the highest priority element
-print("Highest priority element:", pq.delete())  # Output: Task 1
+print("Highest priority element:", pq.delete())  
 
 # Get the element with the current highest priority
-print("Current highest priority element:", pq.get_highest_priority_element())  # Output: Task 2
+print("Current highest priority element:", pq.get_highest_priority_element())  
 
 # Insert another element
 pq.insert(0, 'Task 0')
 
 # Check if the priority queue is empty
-print("Is priority queue empty?", pq.is_empty())  # Output: False
+print("Is priority queue empty?", pq.is_empty())  
 
 # Get the size of the priority queue
-print("Size of priority queue:", pq.size())  # Output: 3
+print("Size of priority queue:", pq.size())  
 
 
