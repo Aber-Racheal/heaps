@@ -1,6 +1,3 @@
-
-
-# Python3 implementation of Min Heap 
   
 import sys 
   
