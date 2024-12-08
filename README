@@ -1,0 +1,50 @@
+# Data Structures and Algorithms: Heaps and Priority Queues
+
+This repository contains Python implementations of various heap-related data structures and algorithms.
+
+## Contents
+
+1. Max Heap Implementation
+2. Array to Heap Conversion
+3. Finding Kth Largest Element
+4. Sorting Almost Sorted Array
+5. Priority Queue Implementation
+
+## Max Heap Implementation
+
+The `MaxHeap` class provides a complete implementation of a max heap, including:
+- Insertion
+- Deletion
+- Extracting maximum element
+- Heapify up and down operations
+
+## Array to Heap Conversion
+
+Functions to convert arrays into:
+- Min Heap
+- Max Heap
+
+## Finding Kth Largest Element
+
+An efficient algorithm to find the kth largest element in an unsorted array using a heap.
+
+## Sorting Almost Sorted Array
+
+A function to sort an almost sorted array where each element is at most k positions away from its correct sorted position.
+
+## Priority Queue Implementation
+
+A `PriorityQueue` class that uses a heap to efficiently manage elements with priorities.
+
+## Usage
+
+Each section in the code file contains example usage of the implemented functions and classes. You can run the file to see the results of these examples.
+
+## Requirements
+
+- Python 3.x
+- No external libraries required (uses built-in `heapq` module)
+
+## Contributing
+
+Feel free to contribute to this project by submitting pull requests or opening issues for any bugs or enhancements.
